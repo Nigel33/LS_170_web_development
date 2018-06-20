@@ -1,0 +1,16 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Payment System</title>
+</head>
+  <body>
+  <h2>Payment System </h2>
+
+  <% if session[:message] %>
+     <%= session.delete(:message) %>
+  <% end %>
+  <%= yield %>
+
+  </body>
+</html>

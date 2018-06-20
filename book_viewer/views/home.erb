@@ -1,0 +1,26 @@
+
+<!doctype html>
+<html>
+<body>
+    <h2 class="content-subhead">Table of Contents</h2>
+
+    <div class="pure-menu">
+      <!-- <ul class="pure-menu-list">
+        <li class="pure-menu-item">
+          <a href="#" class="pure-menu-link">Chapter 1</a>
+        </li>
+      </ul> -->
+
+      <!--Updated version for table of contentss-->
+        <ul class="pure-menu-list">
+          <% @contents.each_with_index do |chapter, index| %>
+            <li class="pure-menu-item">
+              <a
+              href="/chapters/<%= index + 1 %>" class="pure-menu-link"><%= chapter %></a>
+            </li>
+          <% end %>
+        </ul>
+    </div>
+
+</body>
+</html>

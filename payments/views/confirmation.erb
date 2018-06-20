@@ -1,0 +1,27 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Created</th>
+      <th>Card Number</th>
+      <th>Expiration Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    	<% @data.each do |payment| %>
+    		<tr>
+    			<td><%= render_name(payment["First name"], payment["Last name"]) %></td>
+    			<td><%= payment["Time"] %></td>
+    			<td><%= render_card_number(payment["Card number"]) %></td>
+    			<td><%= payment["Expiration date"] %></td>
+      	</tr>
+      <% end %>
+
+  </tbody>
+</table>
+
+<a href="/">Restart</a>
+
+<a href="/payments/new">Add a new payment</a>
+
+

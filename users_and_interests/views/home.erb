@@ -1,0 +1,26 @@
+
+<!doctype html>
+<html>
+<body>
+    <h2 class="content-subhead">Nigel's Space</h2>
+
+    <div class="pure-menu">
+      <!-- <ul class="pure-menu-list">
+        <li class="pure-menu-item">
+          <a href="#" class="pure-menu-link">Chapter 1</a>
+        </li>
+      </ul> -->
+
+      <!--Updated version for table of contentss-->
+        <ul class="pure-menu-list">
+          <% @users.each do |user| %>
+            <a href="/user/<%= user %>" ><li><%= user %></li></a>
+          <% end %>
+
+
+
+        </ul>
+    </div>
+
+</body>
+</html>
